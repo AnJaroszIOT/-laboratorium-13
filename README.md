@@ -20,34 +20,18 @@ library(dplyr)
 2.  Zapoznaj się z plikiem otwierając go w notatniku
 3.  Wczytaj go (*fromJSON()*) i wyświetl parę pierwszych wierszy
 
-```{r}
-
-```
-
 ## Zadanie 2: .sav - pliki oprogramowania SPSS
 
 1.  Wczytaj i wyświetl pierwsze wiersze pliku *health_control.sav*
-
-```{r}
-
-```
 
 ## Zadanie 3: .csv .txt
 
 1.  Wczytaj plik *example.txt (read.csv()).* Sprawdź jaki separator jest wykorzystywany w pliku. Ustaw parametr *na.strings.*
 2.  Zapisz wczytane dane to pliku csv
 
-```{r}
-
-```
-
 3.  Pojawiający się błąd wynika to z faktu że dane zostały zapisane z kolumną z numerami wierszy, jednak bez jej nazwy. W celu naprawy błędnu można na przykład ręcznie dodać nazwę kolumny edytując plik w notatniku, a następnie wczytać go z parametrem *row.names = 1.*
 4.  Zapisz wczytany plik do formatu csv, pomijając indeksy wierszy (*write.csv(), ustaw row.names = FALSE*)
 5.  Obejrzyj zapisany plik w notatniku
-
-```{r}
-
-```
 
 ## Zadanie 4: Pliki XML
 
@@ -58,10 +42,6 @@ XML to format danych oparty o znacznikil. Pliki tego typu można otworzyć np. n
 3.  Oblicz ile płyt znajduje się w pliku
 4.  Oblicz sumę cen wszystkich płyt (*as.numeric()*)
 
-```{r}
-
-```
-
 ## Zadanie 5: Plik XML i weryfikowanie szablonem XSD
 
 Często podczas pracy z plikami XML zachodzi poprawność zweryfikowania czy spełnia on wymagania strukturalne i semantyczne. Przydatne jest to na przykład gdy towrzymy funkcję operującą na plikach z różnych źródeł i nie chcemy aby niepoprawne pliki spowodowały błędy. Służą do tego pliki XSD
@@ -69,9 +49,6 @@ Często podczas pracy z plikami XML zachodzi poprawność zweryfikowania czy spe
 1.  Korzystając z funkcji xml_validate*()* spawdź czy plik books.xml jest zgodny z schematem
 2.  Jeśeli występują jakieś problemy, otwórz plik xml (na przykład w notatniku) i dokonaj stosownych poprawek (jeżeli dodajesz jakieś dane, możesz wybrać dowolne wartości). Następnie przeprowadź walidację raz jeszcze.
 
-```{r}
-
-```
 
 ## Zadanie 6: Apache arrow vs in memory
 
@@ -88,25 +65,8 @@ Zadanie ma na celu porównanie przetwarzania danych w różnych formatach przy u
 5.  Sprawdź ile miejsca w pamięci zajmuje każdy z wczytanych obiektów. Zmierz czas jaki jest potrzebny na każdy rodzaj wczytania danych.
 6.  Porównaj ile miejsca na dysku zajmuje format csv, a ile parquet
 7.  Spawdź ile wierszy danych zawiera analizowany plik csv
-
-```{r}
-
-```
-
 8.  Korzystając z pipe operator oblicz sumę danych z kolumny *Number_of_employees* dla każdego z 3 sposobów wczytywania danych. W przypadku plików otwartych z wykorzystaniem pakietu arrow najpierw należy wczytać dane: ... *select(col_name) %\>% collect() %\>% ...*
 9.  Zmierz czas wykonania tych obliczeń
-
-```{r}
-
-```
-
-```{r}
-
-```
-
-```{r}
-
-```
 
 ### Materiały dodatkowe:
 
